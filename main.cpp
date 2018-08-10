@@ -24,9 +24,23 @@ void test2() {
 		cout<<"Not matched."<<endl;
 	}
 }
+
+void test3() {
+	cout<<"Test3."<<endl;
+	char str[6] = {'a', 'b', 'c', 'c', 'c', '\0'};
+	char pattern[5] = {'*', '.', 'c', '*', '\0'};
+	if (match(str, pattern)) {
+		cout<<"Matched."<<endl;
+	}
+	else {
+		cout<<"Not matched."<<endl;
+	}
+}
+
 int main() {
 	test1();
 	test2();
+	test3();
 	return 0;
 }
 
